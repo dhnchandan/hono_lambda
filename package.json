@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "cdk deploy --all --profile adora",
+    "destroy": "cdk destroy --profile adora"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
