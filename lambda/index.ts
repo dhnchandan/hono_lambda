@@ -25,4 +25,22 @@ app.get('/info', (c) => {
     })
 });
 
+app.get("/posts/:post_id/comments/:comment_id", (c) => {
+    const {post_id, comment_id} = c.req.param();
+
+    return c.json({
+        post_id,
+        comment_id,
+    })
+});
+
+app.get("/posts/:date{[0-9]+}/:title{[a-z]+}", (c) => {
+    const {date, title} = c.req.param();
+
+    return c.json({
+        date,
+        title,
+    })
+});
+
 export const handler = handle(app);
